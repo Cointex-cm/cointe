@@ -68,6 +68,18 @@
         </section>
     </body>
 <script>
+const urlParams = new URLSearchParams(window.location.search);
+const status = urlParams.get('status');
+
+if (status === 'ready'){
+	let popout = document.getElementById('withdraw');
+		popout.classList.add('show-modal');
+}else{
+	let popout = document.getElementById('deposit');
+		popout.classList.add('show-modal');
+}
+
+
  if(localStorage.getItem('Check') =='one'){
 	var img = document.getElementById("img");
 img.style.display = "none";
@@ -142,15 +154,5 @@ div.style.display = "flex";
 	text.style.display = 'block';
 	text.style.color = '#aa0022';
 	};
-	
-if(isset($_GET['token']) && $_GET['token'] == "withdraw"){ 
-
-	let popout = document.getElementById('withdraw');
-		popout.classList.add('show-modal');
-}else{
-	let popout = document.getElementById('deposit');
-		popout.classList.add('show-modal');
-}
 </script>
 </html>
-
