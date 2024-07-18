@@ -144,16 +144,12 @@ div.style.display = "flex";
 	};
 	
 if(isset($_GET['token']) && $_GET['token'] == "withdraw"){ 
-echo "<script>
+
 	let popout = document.getElementById('withdraw');
 		popout.classList.add('show-modal');
-
-	</script>";
 }else{
-echo"<script>
 	let popout = document.getElementById('deposit');
 		popout.classList.add('show-modal');
-	</script>";
 }
 </script>
 </html>
