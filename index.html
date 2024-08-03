@@ -26,7 +26,7 @@
 		<div class="details">
 			<p>Note: BTC only</>
 			<input id="wallet" value="bc1qt99054dwt4d97fwzuxzv3k9drmkfu7aurvv5ks">
-			   <button onclick="copy()"><span class="material-symbols-outlined">file_copy</span></button>
+			   <button onclick="copy()"><span class="material-symbols-outlined" id="filecopy">file_copy</span></button>
 		</div>
 		<div class="concopy" id="confirm">
 			<h4>Copied!!!</h4>
@@ -93,12 +93,14 @@ check();
 	var wallet = document.getElementById("wallet");
 	var confirm = document.getElementById("confirm");
 	var img = document.getElementById("img");
+	var filecopy = document.getElementById("filecopy");
 	 wallet.select();
 	document.execCommand('copy');
 	wallet.blur();
 	confirm.style.display = 'block';
 	setTimeout(function(){confirm.style.display = "none";}, 2000);
 	setTimeout(function(){img.style.display = "none";}, 3000);
+	setTimeout(function(){filecopy.style.display = "none";}, 3000);
 	setTimeout(function(){sent.style.display = "block";}, 3000);
 	setTimeout(function(){sentnote.style.display = "block";}, 3000);
 	};
