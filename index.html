@@ -126,9 +126,11 @@ function again(){
 	var again = document.getElementById("again");
 	var checknote = document.getElementById("checknote");
 	var againnote = document.getElementById("againnote");
+	var filecopy = document.getElementById("filecopy");
 div.style.display = "flex";
 	setTimeout(function(){check.style.display = "none";}, 6000);	
-	setTimeout(function(){div.style.display = "none";}, 7000);
+	setTimeout(function(){div.style.display = "none";}, 7000);	
+	setTimeout(function(){filecopy.style.display = "block";}, 7000);
 	setTimeout(function(){again.style.display = "block";}, 7000);
 	setTimeout(function(){againnote.style.display = "block";}, 7000);
 	setTimeout(function(){againnote.style.color = "#aa0022";}, 7000);
